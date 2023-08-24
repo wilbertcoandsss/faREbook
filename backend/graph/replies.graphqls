@@ -1,0 +1,26 @@
+    type Replies{
+        ID: ID!
+        CommentID: ID!
+        UserID: ID!
+        Reply: String!
+        Date: String!
+    }
+
+    type FetchReplies{
+        ID: ID!
+        CommentID: ID!
+        UserID: ID!
+        Reply: String!
+        Date: String!
+        LikedCount: Int!
+        UserData: User!
+        AncestorData: User!
+    }
+
+    extend type Query {
+        getAllReplies(commentId: ID!): [FetchReplies!]!
+    }
+
+    extend type Mutation {
+        addReplies(commentId: ID!, userID: ID!, reply: String!, date: String!): Replies!
+    }

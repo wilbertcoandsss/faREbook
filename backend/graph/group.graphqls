@@ -1,0 +1,47 @@
+type Group{
+	ID: ID!
+	GroupName: String!
+	GroupPrivacy: String!
+	GroupDesc: String!
+	GroupAdmin: String!
+	GroupBannerPic: String!
+    GroupCreated: String!
+}
+
+input NewGroup{
+    GroupName: String!
+	GroupPrivacy: String!
+	GroupDesc: String!
+	GroupAdmin: String!
+	GroupBannerPic: String!
+    GroupCreated: String!
+}
+
+type FetchGroup{
+    ID: ID!
+	GroupName: String!
+	GroupPrivacy: String!
+	GroupDesc: String!
+	GroupAdmin: String!
+	GroupBannerPic: String!
+    GroupCreated: String!
+    GroupMember: [GroupMemberWUSer!]!
+}
+
+type FetchGroupWPost{
+	FetchGroup: FetchGroup!
+	GroupPost: [FetchGroupPost]!
+}
+
+extend type Query{
+    getAllGroup: [FetchGroup!]!
+    getGroupById(userId: ID!): [FetchGroup!]! 
+	getGroupInfo(groupId: ID!): FetchGroup!
+	GetAllUserGroupPost(limit: Int, offset: Int, userId: ID!): [FetchGroupWPost!]!
+}
+
+extend type Mutation{
+    insertGroup(newGroup: NewGroup!): Group!
+	changeCoverPhoto(groupId: ID!, mediaUrl: String!): Boolean!
+	deleteGroup(groupId: ID!): Boolean!
+}

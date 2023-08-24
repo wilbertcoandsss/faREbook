@@ -1,0 +1,57 @@
+
+type User {
+  id: ID!
+  firstname: String!
+  surname: String!
+  email: String!
+  Dob: String!
+  verifcode: String!
+  isverified: Boolean!
+  gender: String!
+  profilepic: String!
+}
+
+type Query {
+  getUser(id:ID!): User
+  getAllUser: [User!]!
+  getUserByEmail(email:String!): User
+  validateJWT(token: String!): User!
+}
+
+input NewUser{
+  firstname: String!
+  surname: String!
+  email: String!
+  password: String!
+  Dob: String!
+  verifcode: String!
+  isverified: Boolean!
+  gender: String!
+  profilepic: String!
+}
+
+input LoginInput {
+  email: String!
+  password: String!
+}
+
+type Mutation{
+  createUser(inputUser: NewUser!): User!
+  updateUser(id: ID!, inputUser: NewUser!): User!
+  deleteUser(id: ID!): User!
+  loginUser(input: LoginInput!): AuthUser! 
+  setVerified(id: ID!): User! 
+  checkPassword(pw: String!, id: ID!): Boolean!
+  resetPassword(newPw: String!, id: ID!): Boolean!
+}
+
+extend type Query{
+  checkVerified(email: String!): Boolean!
+}
+
+type AuthUser{
+    id: ID!
+    email: String!
+    isverified: Boolean!
+    token: String!
+}

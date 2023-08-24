@@ -1,0 +1,26 @@
+type Friends{
+    UserID: ID!
+    FriendsID: ID!
+    Status: String!
+}
+
+type FetchFriendsReq{
+    UserID: ID!
+    FriendsID: ID!
+    Status: String!
+    UserData: User!
+    FriendsData:User!
+}
+
+extend type Query{
+    getAllFriends(UserId: ID!): [FetchFriendsReq!]!
+    getFriendRequest(UserID: ID!): [FetchFriendsReq!]!
+    getSuggestedFriends(UserID: ID!): [User!]!
+    getMutualFriends(UserID1: ID!, UserID2:ID!): Int!
+}
+
+extend type Mutation{
+    requestFriends(UserID: ID!, FriendsID: ID!): Boolean!
+    declineReq(UserID: ID!, FriendsID: ID!): Boolean!
+    acceptReq(UserID: ID!, FriendsID: ID!): Boolean!
+}

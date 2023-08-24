@@ -1,0 +1,47 @@
+type Stories{
+    ID: ID!
+	UserID: ID!
+	Type: String!
+	BgColor: String!   
+	FontFamily: String!
+	FontColor: String!
+	TextContent: String!
+	Date: String!
+	ZoomLevel: Int!
+}
+
+type FetchStories{
+    ID: ID!
+	UserID: ID!
+	Type: String!
+	BgColor: String!   
+	FontFamily: String!
+	FontColor: String!
+	TextContent: String!
+	Date: String!
+	ZoomLevel: Int!
+    MediaUrl: [String!]!
+	AuthorData: User!
+}
+
+input NewStories{
+    UserID: ID!
+	Type: String!
+	BgColor: String
+	FontFamily: String
+	FontColor: String
+	TextContent: String
+	Date: String!
+    MediaUrl: [String]
+	ZoomLevel: Int
+}
+
+extend type Query{
+    getAllStories: [FetchStories!]!
+	getStories(storiesId: ID!): FetchStories!
+	getStoriesByUserId(userId: ID!): [FetchStories]!
+}
+
+extend type Mutation{
+    insertStories(newStories: NewStories!): Stories!
+}

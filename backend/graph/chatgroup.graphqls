@@ -1,0 +1,40 @@
+type ChatGroupHeader{
+    id: ID!
+    groupId: ID!
+    createdAt: String!
+}
+
+type ChatGroupDetails{
+    id: ID!
+    chatHeaderId: ID!
+    senderId: ID!
+    chatText: String!
+    createdAt: String!
+    type: String!
+	mediaUrl: String!
+}
+
+type FetchGroupChat{
+    chatHeaderId: ID!
+    chatHeaderInformation: ChatGroupHeader!
+    chatDetailsInformation: [ChatGroupDetails!]!
+    senderData: [User!]!
+}
+
+input newChatGroupDetail{
+    chatHeaderId: ID!
+    senderId: ID!
+    chatText: String!
+    type: String!
+    mediaUrl: String!
+}
+
+extend type Query{
+    getGroupChatHeader(userId:String!): [FetchGroupChat!]!
+    getAllGroupConversation(groupId:String!): [FetchGroupChat!]!
+}
+
+extend type Mutation{
+    createGroupChat(groupId: ID!): Boolean!
+    createGroupMessage(inputChatDetail:newChatGroupDetail!): Boolean!
+}

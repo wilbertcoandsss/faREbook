@@ -1,0 +1,36 @@
+type GroupPost{
+    id: ID!
+    groupId: ID!
+    contentText: String!
+    authorId: ID!
+    postDate: String!
+    postPrivacy: String!
+}
+
+type FetchGroupPost {
+  id: ID!
+  contentText: String!
+  authorId: String!
+  postDate: String!
+  authorData: User!
+  likedCount: Int!
+  mediaUrl: [String!]!
+  postPrivacy: String!
+}
+
+input NewGroupPostInput {
+  groupId: ID!
+  contentText: String!
+  authorId: String!
+  postDate: String!
+  postPrivacy: String!
+}
+
+extend type Query {
+  getAllGroupPost(limit: Int, offset: Int, groupId: ID!): [FetchGroupPost!]!
+  getAllGroupPostWithoutLimit(limit: Int, offset: Int): [FetchGroupPost!]!
+}
+
+extend type Mutation {
+  insertGroupPost(inputGroupPost: NewGroupPostInput!): GroupPost!
+}

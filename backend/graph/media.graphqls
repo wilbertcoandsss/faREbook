@@ -1,0 +1,12 @@
+type Media {
+    postId: ID!
+    mediaUrl: String!
+}
+
+extend type Query {
+  getAllMedia(postId:ID!): [Media!]!
+}
+
+extend type Mutation {
+  insertMedia(postId: ID!, mediaUrl: [String!]!): [Media]!
+}

@@ -1,0 +1,18 @@
+type Like {
+  PostID: String!
+  UserID: String!
+  Type: String!
+}
+
+extend type Mutation {
+  likePost(postID: ID!, userID: ID!): Boolean!
+  unlikePost(postID: ID!, userID: ID!): Boolean!
+  likeComment(commentId: ID!, userID: ID!): Boolean!
+  unlikeComment(commentId: ID!, userID: ID!): Boolean!
+  likeReels(reelsId: ID!, userID: ID!): Boolean!
+  unlikeReels(reelsId: ID!, userID: ID!): Boolean!
+}
+
+extend type Query{
+  getLikeStatus(postID: ID!, userID: ID!): Boolean!
+}

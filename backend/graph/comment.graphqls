@@ -1,0 +1,26 @@
+    type Comment{
+        ID: ID!
+        PostID: ID!
+        UserID: ID!
+        Comment: String!
+        Date: String!
+    }
+
+    type FetchComment{
+        ID: ID!
+        PostID: ID!
+        UserID: ID!
+        Comment: String!
+        Date: String!
+        LikedCount: Int!
+        UserData: User!
+        RepliesCount: Int!
+    }
+
+    extend type Query {
+        getAllComments(postID: ID!): [FetchComment!]!
+    }
+
+    extend type Mutation {
+        addComment(postID: ID!, userID: ID!, comment: String!, date: String!): Comment!
+    }

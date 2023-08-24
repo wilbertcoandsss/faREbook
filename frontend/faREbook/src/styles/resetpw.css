@@ -1,0 +1,56 @@
+.resetContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.resetInnerContainer {
+    background-color: #f1f2f6;
+    display: flex;
+    flex-direction: column;
+    width: 150%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.resetContainer h3,
+h4 {
+    text-align: left;
+}
+
+.line-break {
+    width: 100%;
+    border: 0.4px solid rgb(187, 187, 187);
+    margin-bottom: 20px;
+}
+
+.resetContainer input {
+    width: 88%;
+    padding: 13px;
+    margin-bottom: 10px;
+    border: 0.5px solid #cac7c7;
+    border-radius: 3px;
+}
+
+
+.resetContainer input:focus {
+    outline: 1px solid #256ff1;
+}
+
+.resetContainer ::placeholder {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.resetContainer input:focus::placeholder {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.accBtn {
+    display: flex;
+    justify-content: end;
+}

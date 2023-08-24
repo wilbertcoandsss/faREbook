@@ -1,0 +1,1771 @@
+$myColor: red;
+$greyColor: #e4e6e8;
+
+$darkBg: #18191a;
+$darkComponent: #242526;
+$darkInput: #3a3b3c;
+
+a {
+    text-decoration: none;
+}
+
+.loginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    vertical-align: middle;
+    height: 90vh;
+}
+
+.richEditor::placeholder {
+    color: white;
+}
+
+.loginInnerContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 50%;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginInnerContainer div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.loginInnerContainer input {
+    width: 150%;
+    padding: 13px;
+    margin-bottom: 10px;
+    border: 0.5px solid #cac7c7;
+    border-radius: 3px;
+}
+
+.loginInnerContainer input:focus {
+    outline: 1px solid #256ff1;
+}
+
+.loginInnerContainer ::placeholder {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.loginInnerContainer input:focus::placeholder {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+
+.errorMsg {
+    background-color: #f5ebea;
+    outline: 0.7px solid red;
+    padding: 13px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    width: 115%;
+}
+
+.registerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+}
+
+.registerInnerContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 50%;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    justify-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.registerInnerContainer div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.registerInnerContainer h2 {
+    margin-bottom: 10px;
+}
+
+.registerInnerContainer h4 {
+    margin-top: 10px;
+}
+
+.registerInnerContainer input {
+    width: 150%;
+    padding: 13px;
+    margin-bottom: 10px;
+    border: 0.5px solid #cac7c7;
+    border-radius: 3px;
+}
+
+.registerInnerContainer input[type="date"] {
+    width: 191%;
+    padding: 13px;
+    margin-bottom: 10px;
+    border: 0.5px solid #cac7c7;
+    border-radius: 3px;
+}
+
+.registerInnerContainer select {
+    width: 330%;
+    padding: 13px;
+    margin-bottom: 10px;
+    border: 0.5px solid #cac7c7;
+    border-radius: 3px;
+}
+
+
+.registerInnerContainer input:focus {
+    outline: 1px solid #256ff1;
+}
+
+.registerInnerContainer ::placeholder {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.registerInnerContainer input:focus::placeholder {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.lblMode {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.logoutBtn {
+    background-color: $darkBg;
+    padding: 5px;
+    border-radius: 10px;
+    width: 150px;
+    text-align: center;
+    transition: .3s ease;
+    color: white;
+}
+
+.logoutBtn:hover {
+    transition: .3s ease;
+    background-color: whitesmoke;
+    color: black;
+}
+
+.modeIcon {
+    position: absolute;
+    font-size: 2em;
+    color: black;
+    transition: transform 1s ease;
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, .5));
+    /* Adding a smooth transition effect */
+}
+
+.rotate90 {
+    transform: rotate(360deg) scale(0);
+    transition-delay: .0s;
+}
+
+.toggleMode {
+    position: absolute;
+    display: block;
+    width: 55px;
+    height: 55px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    box-shadow:
+        0 8px 60px rgba (0, 0, 0, .1),
+        0 8px 8px rgba (0, 0, 0, .1),
+        0 -4px 4px rgba (0, 0, 0, .1),
+    ;
+    z-index: -1;
+    transition: 1s;
+}
+
+
+.errorMsg1 {
+    background-color: #f5ebea;
+    outline: 0.7px solid red;
+    padding: 13px;
+    margin-bottom: 35px;
+    border-radius: 3px;
+    text-align: center;
+    flex-direction: column;
+}
+
+.forgotContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    height: 80vh;
+}
+
+.forgotInnerContainer {
+    background-color: white;
+    padding: 20px;
+}
+
+.forgotContainer h3,
+h4 {
+    text-align: left;
+}
+
+.lineBreak {
+    width: 100%;
+    border: 0.4px solid rgb(187, 187, 187);
+    margin-bottom: 20px;
+}
+
+.forgotContainer input {
+    width: 88%;
+    padding: 13px;
+    margin-bottom: 10px;
+    border: 0.5px solid #cac7c7;
+    border-radius: 3px;
+}
+
+
+.forgotContainer input:focus {
+    outline: 1px solid #256ff1;
+}
+
+.forgotContainer ::placeholder {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.forgotContainer input:focus::placeholder {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.resetContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 90vh;
+}
+
+.resetInnerContainer {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.resetContainer h3,
+h4 {
+    text-align: left;
+}
+
+.resetContainer input {
+    width: 93%;
+    padding: 13px;
+    margin-bottom: 10px;
+    border: 0.5px solid #cac7c7;
+    border-radius: 3px;
+}
+
+
+.resetContainer input:focus {
+    outline: 1px solid #256ff1;
+}
+
+.resetContainer ::placeholder {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.resetContainer input:focus::placeholder {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.accBtn {
+    display: flex;
+    justify-content: space-between;
+}
+
+// Navbar
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $darkComponent;
+    padding: 6px;
+    vertical-align: middle;
+    transition: background-color 0.8s ease;
+}
+
+.left {
+    margin-left: 10px;
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.center {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    min-width: 700px;
+}
+
+.center a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 10px;
+    transition: .3s ease;
+}
+
+.center a:hover {
+    transition: .3s ease;
+}
+
+.iconNavbar {
+    transition: .3s ease;
+    width: 30px;
+    height: 30px;
+    color: white;
+}
+
+.iconNavbar:hover {
+    transition: .3s ease;
+    color: #256ff1;
+}
+
+.iconNavbarActive {
+    color: #256ff1;
+    transition: .3s ease;
+    width: 30px;
+    height: 30px;
+}
+
+.right {
+    margin-right: 10px;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    ;
+}
+
+.right a {
+    text-decoration: none;
+    color: black;
+    margin-left: 10px;
+    padding: 8px;
+    transition: .3s ease;
+    border-radius: 30px;
+    color: white;
+}
+
+.right a:hover {
+    transition: .3s ease;
+    background-color: rgb(123, 123, 123);
+}
+
+// Search
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.searchBar {
+    position: relative;
+    margin-left: 10px;
+}
+
+.searchBar input {
+    padding: 12px 12px 12px 30px;
+    border: none;
+    border-radius: 25px;
+    width: 200px;
+    outline: none;
+    background-color: $darkInput;
+    color: white;
+}
+
+.searchBarMessenger {
+    position: relative;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchBarMessenger input {
+    border-radius: 25px;
+    width: 95%;
+    outline: none;
+    background-color: #dddddd;
+    border: none;
+    padding: 10px;
+    padding-left: 30px;
+    color: white
+}
+
+.searchBar input::placeholder {
+    color: white
+}
+
+/* Style the search icon */
+.searchIcon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    /* Replace with the path to your search icon image */
+    background-size: cover;
+    cursor: pointer;
+}
+
+.searchIconMsg {
+    position: absolute;
+    top: 55%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+// Body
+.mainBody {
+    display: flex;
+    justify-content: space-around;
+    padding: 6px;
+    vertical-align: middle;
+    background-color: $darkBg;
+
+    transition: background-color 0.8s ease;
+}
+
+.leftBody {
+    margin-left: 10px;
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    color: white;
+    transition: background-color 0.8s ease;
+}
+
+.leftBody div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 220px;
+    padding: 2px;
+    transition: .3s ease;
+    border-radius: 15px;
+    gap: 15px;
+    transition: background-color 0.8s ease;
+}
+
+.leftBody div:hover {
+    background-color:
+        #e4e6e8;
+    transition: .3s ease;
+    transition: background-color 0.8s ease;
+}
+
+.centerBody {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    min-width: 700px;
+    flex-direction: column;    
+    transition: background-color 0.8s ease;
+}
+
+.rightBody {
+    margin-right: 10px;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.insertPostCard {
+    display: flex;
+    justify-content: flex-start;
+    padding: 8px;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    background-color: $darkComponent;
+    border-radius: 15px;
+    border: 0.2px solid gainsboro;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.insertPostField button {
+    background-color: $darkInput;
+    border: 0.3px solid gainsboro;
+    width: 260%;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: left;
+    color: white;
+    margin-left: 15px;
+    transition: .3s ease;
+}
+
+.insertPostField button:hover {
+    background-color:
+        #e4e6e8;
+    transition: .3s ease;
+}
+
+// Popup
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+/* Apply blur effect to the background */
+.popup::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(0.5px);
+    /* Adjust the blur radius as needed */
+}
+
+.popupInner {
+    position: relative;
+    padding: 32px 32px 0px 32px;
+    width: 100%;
+    max-width: 740px;
+    background-color: $darkComponent;
+    border-radius: 10px;
+    overflow-y: auto;
+    max-height: 80vh;
+    color: white;
+    /* Set a maximum height to prevent overflow */
+}
+
+.popupInner .closeBtn {
+    position: sticky;
+    top: -13px;
+    float: right;
+    background-color: #f0f2f5;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    transition: .3s ease;
+    z-index: 2;
+}
+
+.popupInner .closeBtn:hover {
+    background-color: #e4e6e8;
+    ;
+    transition: .3s ease;
+}
+
+.popupInner div h2 {
+    text-align: center;
+}
+
+.popupInner div h3 {
+    margin: 0px 0px 5px 0px;
+}
+
+.popupInner select {
+    width: 108%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    background-color: $greyColor;
+}
+
+.mainContainerCard {
+    display: flex;
+    justify-content: flex-start;
+    padding: 8px;
+    flex-direction: column;
+    width: 100%;
+    background-color: $darkComponent;
+    border-radius: 15px;
+    border: 0.2px solid gainsboro;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.mainContainerComment {
+    display: flex;
+    justify-content: flex-start;
+    padding: 8px;
+    flex-direction: column;
+    width: 100%;
+    background-color: $darkComponent;
+    border: 0.2px solid gainsboro;
+    border-radius: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.insertComment {
+    display: flex;
+    flex-direction: row;
+    background-color: $darkComponent;
+    text-align: center;
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
+    padding: 20px 0px 20px 0px;
+    align-items: center;
+}
+
+.insertComment textarea {
+    resize: none;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:
+        #f0f2f5;
+    border-radius: 15px;
+    padding: 12px;
+    border: none;
+    padding-right: 25px;
+    height: 5vh;
+    outline: none;
+}
+
+.iconSend {
+    position: absolute;
+    bottom: 35px;
+    right: 10px;
+    width: 25px;
+    height: 20px;
+    margin-right: 10px;
+    color: white;
+}
+
+.file-input-label {
+    width: 100%;
+    display: inline-block;
+    background-color: #4285f4;
+    color: white;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.8s ease;
+}
+
+.file-input-label:hover {
+    background-color: #3d77e6;
+}
+
+.file-input {
+    display: none;
+    width: 100%;
+}
+
+.uploadContainer {
+    background-color: $darkComponent;
+    border-radius: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 0.5px solid #f2f2f2;
+    padding: 15px;
+}
+
+.uploadInnerContainer {
+    background-color: $darkInput;
+    border-radius: 15px;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s ease;
+}
+
+.uploadInnerContainer:hover {
+    background-color: $darkBg;
+    transition: .3s ease;
+}
+
+.removeButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.previewImg {
+    width: 250px;
+    height: 175px;
+    border-radius: 5px;
+}
+
+.previewVideo {
+    width: 320px;
+    height: 320px;
+}
+
+.removeMedBtn {
+    margin-top: 6px;
+    padding: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: $greyColor;
+    border-radius: 15px;
+    transition: .3s ease;
+}
+
+.removeMedBtn:hover {
+    transition: .3s ease;
+    background-color: rgb(201, 201, 201);
+}
+
+.itemWrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.numbering {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.errorContainerUpload {
+    background-color: #e6a09a;
+    border-radius: 15px;
+    height: 18vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s ease;
+    color: red;
+    flex-direction: column;
+}
+
+.manualCarousel {
+    width: 100%;
+    position: relative;
+}
+
+.carouselContent {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carouselButtonLeft,
+.carouselButtonRight {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.carouselButtonLeft {
+    left: 10px;
+}
+
+.carouselButtonRight {
+    right: 10px;
+}
+
+.carouselIcon {
+    color: white;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    border-radius: 40px;
+    transition: .3s ease;
+}
+
+.carouselIcon:hover {
+    background-color: #515151;
+    transition: .3s ease;
+}
+
+
+.imageContainer {
+    width: 100%;
+    overflow: hidden;
+}
+
+.imageCarousel {
+    width: 100%;
+    height: 50%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.sidebar {
+    width: 25%;
+    background-color: whitesmoke;
+    padding: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: background-color 0.8s ease;
+}
+
+.main {
+    width: 75%;
+    background-color: black;
+    padding: 20px;
+    transition: background-color 0.8s ease;
+}
+
+.rightTopNavbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+}
+
+.plusStoryBtn {
+    width: 30px;
+    height: 30px;
+    padding: 15px;
+    color: #4285f4;
+    transition: .3s ease;
+    background-color: $greyColor;
+    border-radius: 50%;
+}
+
+.plusStoryBtn:hover {
+    transition: .3s ease;
+    background-color: #c9c9c9;
+}
+
+.createStoryContainer {
+    display: flex;
+    width: 20%;
+    height: 50%;
+    background: rgb(100, 82, 234);
+    background: linear-gradient(135deg, rgba(100, 82, 234, 1) 0%, rgba(118, 153, 238, 1) 24%, rgba(134, 204, 252, 1) 56%, rgba(120, 147, 245, 1) 71%, rgba(134, 204, 252, 1) 82%);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: .3s ease;
+    border: none;
+}
+
+.createStoryContainer:hover,
+.createStoryContainer1:hover {
+    transition: .3s ease;
+    filter: brightness(80%);
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.createStoryContainer1 {
+    display: flex;
+    width: 20%;
+    height: 50%;
+    background: rgb(179, 56, 163);
+    background: linear-gradient(135deg, rgba(179, 56, 163, 1) 0%, rgba(167, 116, 217, 1) 24%, rgb(235, 20, 120) 56%, rgba(120, 147, 245, 1) 71%, rgb(187, 45, 227) 82%);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: .3s ease;
+    border: none;
+}
+
+.createStoryContainer h4,
+.createStoryContainer1 h4 {
+    color: white;
+}
+
+.createStoryContainer svg,
+.createStoryContainer1 svg {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: white;
+    padding: 10px;
+}
+
+.formInputTextStories textarea {
+    resize: none;
+    width: 90%;
+    height: 250px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: $darkInput;
+    color: white;
+    border-radius: 10px;
+    padding: 15px;
+    border: 1px solid rgb(187, 187, 187);
+    font-size: 18px;
+    transition: .1s ease;
+}
+
+.formInputTextStories textarea:focus {
+    outline: 1px solid #256ff1;
+    transition: .1s ease;
+}
+
+.formInputTextStories :hover {
+    outline: 1px solid black;
+    transition: .1s ease;
+}
+
+.formInputTextStories input {
+    resize: none;
+    width: 90%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: $darkInput;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid rgb(187, 187, 187);
+    font-size: 13px;
+    transition: .1s ease;
+}
+
+.formInputTextStories input:focus {
+    outline: 1px solid #256ff1;
+    transition: .1s ease;
+}
+
+.formInputTextStories :hover {
+    outline: 1px solid black;
+    transition: .1s ease;
+}
+
+.textStoriesPreviewOuter {
+    display: flex;
+    background-color: #606060;
+    height: 86vh;
+    margin: 60px 0px 10px 0px;
+    border-radius: 15px;
+    padding-left: 23px;
+    flex-direction: column;
+    padding-right: 23px;
+    color: white;
+}
+
+.textStoriesPreviewInner {
+    position: relative;
+    background-color: blue;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 71vh;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+.searchUserList {
+    width: 106%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0px 15px 0px;
+    transition: .3s ease;
+    background-color: #18191a;
+    color: white;
+}
+
+.searchUserList:hover {
+    background-color: whitesmoke;
+    transition: .3s ease;
+    color: $darkInput;
+}
+
+.fontStyleSelect {
+    width: 100%;
+    background-color: $darkInput;
+    color: white;
+    border-radius: 10px;
+    padding: 15px;
+    border: 1px solid rgb(187, 187, 187);
+    font-size: 15px;
+    transition: .1s ease;
+}
+
+.colorPalette {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.colorPaletteRow {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.colorBox {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.colorBox:hover {
+    transform: scale(1.1);
+}
+
+.selectedColorBox {
+    border: 1px solid black;
+}
+
+.dropdownSymbol {
+    cursor: pointer;
+    font-size: 24px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s ease;
+}
+
+.dropdownSymbol:hover {
+    transition: .3s ease;
+    background-color: $greyColor;
+}
+
+.dropdownSymbol svg {
+    color: black;
+    width: 35px;
+    height: 35px;
+}
+
+.shareStoryBtn {
+    background-color: #3f78da;
+    border: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    transition: .3s ease;
+    margin-top: 15px;
+    border-radius: 15px;
+    padding: 12px;
+}
+
+.shareStoryBtn:hover {
+    background-color: #2754a2;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+.deleteImgStoryBtn {
+    background-color: rgb(225, 17, 17);
+    border: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    transition: .3s ease;
+    margin-top: 15px;
+    border-radius: 15px;
+    padding: 12px;
+}
+
+.deleteImgStoryBtn:hover {
+    background-color: rgb(164, 30, 30);
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+.circularStoryIndicator {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2.3px solid #256ff1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.nextStoriesBtn,
+.prevStoriesBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.prevStoriesBtn {
+    left: -50px;
+}
+
+.nextStoriesBtn {
+    right: -50px;
+}
+
+.navStoriesBtn {
+    color: #333;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 40px;
+    transition: .3s ease;
+}
+
+.navStoriesBtn:hover {
+    background-color: #515151;
+    transition: .3s ease;
+}
+
+.indicatorContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 7px;
+}
+
+.indicator {
+    width: 35px;
+    height: 5px;
+    background-color: #b7b7b8;
+    margin: 0 2px;
+    transition: width 5s linear;
+}
+
+.active {
+    background-color: #fff;
+}
+
+.indicatorCount {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.progressBarContainer {
+    width: 100%;
+    height: 5px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.progressBar {
+    height: 100%;
+    background-color: #007bff;
+    transition: width 0.1s linear;
+}
+
+.mainReels {
+    width: 100%;
+    background-color: black;
+    padding: 8px;
+}
+
+.mainVidReelsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reelsVid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    width: 390px;
+    height: 830px;
+    border-radius: 13px;
+}
+
+.uploadReelsBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: black;
+    padding: 5px;
+    border-radius: 15px;
+    cursor: pointer;
+    background: white;
+    display: flex;
+    align-items: center;
+    width: 180px;
+    justify-content: space-around;
+    transition: .3s ease;
+}
+
+.uploadReelsBtn:hover {
+    transition: .3s ease;
+    background-color: #989898;
+}
+
+.reelsVidBtn {
+    width: 35px;
+    height: 35px;
+}
+
+//Friends
+.friendsCard {
+    position: relative;
+    width: 280px;
+    text-align: center;
+    background-color: $darkInput;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+
+.confirmFriendsBtn {
+    margin: 15px auto 20px;
+    background-color: #007bff;
+    transition: .3s ease;
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.deleteFriendsBtn {
+    background-color: red;
+    transition: .3s ease;
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.friendDiv {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: .3s ease;
+    border-radius: 15px;
+}
+
+.friendDiv svg {
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+    transition: .3s ease;
+}
+
+.friendDiv:hover {
+    transition: .3s ease;
+    background-color: $greyColor;
+}
+
+.friendDiv:hover svg {
+    color: #007bff;
+    transition: .3s ease;
+}
+
+.coverProfileContainer {
+    background-color: #3d77e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-image: url('assets/aslab.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.profileContainer {
+    // padding: 20px;
+    background-color: $darkBg;
+    color: white;
+}
+
+.coverPhoto {
+    height: 400px;
+    position: relative;
+    background-image: url('cover-photo.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    border-radius: 0 0 15px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.profileInfo {
+    display: flex;
+    margin-top: -100px;
+}
+
+.mainContainerProfile {
+    margin-left: 150px;
+}
+
+.profilePhoto {
+    margin-top: 60px;
+    margin-left: -100px;
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-image: url('profile-photo.jpg');
+    background-size: cover;
+    background-position: center;
+    border: 5px solid white;
+    margin-right: 20px;
+}
+
+.userDetails {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 110px;
+    margin-left: 110px;
+    width: 100%;
+    align-items: center;
+}
+
+.userProfileMainContainer {
+    margin-top: 100px;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.peopleYouMayKnowSection {
+    background-color: $darkComponent;
+    border-radius: 15px;
+    padding: 25px;
+    color: white;
+}
+
+.removeBtnPeopleYouMayKnow {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background-color: rgba(0, 0, 0, 0.671);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+}
+
+.removeBtnPeopleYouMayKnow svg {
+    color: white;
+    width: 20px;
+    height: 20px;
+}
+
+.menuTabProfile {
+    margin-top: 5%;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 20px;
+    gap: 35px;
+    margin-left: 10px;
+}
+
+.menuTabProfile div {
+    transition: .3s ease;
+}
+
+.profileDetailsTab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    padding-bottom: 50px;
+}
+
+.profileDetailsTab h2 {
+    text-align: center;
+}
+
+.profileDetailsTab svg {
+    width: 30px;
+    height: 30px;
+}
+
+.selectedTabProfile {
+    color: #256ff1;
+    padding-bottom: 10px;
+    border-bottom: 2px solid blue;
+    transition: .3s ease;
+}
+
+.menuTabProfile div:hover {
+    transition: .3s ease;
+    color: #007bff;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 9.5%;
+    right: 10;
+    background-color: $darkInput;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 150px;
+    border-radius: 8px;
+    gap: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    transition: background-color 0.8s ease;
+}
+
+.dropdown-content a {
+    color: #333;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.8s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #f5f5f5;
+}
+
+// Messenger
+.startChatBtn {
+    background-color: #007bff;
+    transition: .3s ease;
+    padding: 15px;
+    width: 30%;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+}
+
+.startChatBtn:hover {
+    transition: .3s ease;
+    background-color: #1a53b6;
+    cursor: pointer;
+}
+
+.selectChat {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    background-color: whitesmoke;
+    margin: 5px 0px 15px 0px;
+    border-radius: 15px;
+    padding-left: 15px;
+    transition: .3s ease;
+}
+
+.nonSelectChat {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    background-color: $darkInput;
+    margin: 5px 0px 15px 0px;
+    border-radius: 15px;
+    padding-left: 15px;
+    transition: .3s ease;
+}
+
+
+.selectChat:hover,
+.nonSelectChat:hover {
+    transition: .3s ease;
+    background-color: #b3b3b3;
+}
+
+.sendMsgBtn:hover {
+    transition: .3s ease;
+    // color: rgb(48, 103, 219);
+    color: white;
+    background-color: #007bff;
+}
+
+.sendMsgBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #3083fd;
+    height: 2.5vh;
+    width: 2.5vh;
+    transition: .3s ease;
+    padding: 3px;
+    border-radius: 50%;
+}
+
+.btnRec svg {
+    background-color: $greyColor;
+    border-radius: 50%;
+    transition: .3s ease;
+    padding: 5px;
+}
+
+.btnRec svg:hover {
+    transition: .3s ease;
+    background-color: gainsboro;
+    color: #1c1cff;
+}
+
+.stopRec {
+    background-color: rgb(124, 124, 124);
+    padding: 5px;
+    border-radius: 50%;
+    transition: .3s ease;
+    border: 2px solid $greyColor;
+}
+
+.stopRec:hover {
+    transition: .3s ease;
+}
+
+.invitedMembers {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: $darkComponent;
+}
+
+.groupChoose {
+    transition: .3s ease;
+    padding: 6px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    border-radius: 10px;
+    border: 0.5px solid rgb(191, 191, 191);
+}
+
+.groupChoose:hover {
+    transition: .3s ease;
+    background-color: $greyColor;
+}
+
+.tooltip {
+    position: absolute;
+    top: -30px;
+    /* Adjust this value to position the tooltip */
+    left: calc(20% - 60px);
+    /* Center the tooltip horizontally */
+    background-color: #333;
+    color: white;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 14px;
+    white-space: nowrap;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    background-color: #f0f2f5;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.footer a {
+    color: #385898;
+    text-decoration: none;
+}
+
+/* Add hover effect for links */
+.footer a:hover {
+    text-decoration: underline;
+}
+
+// Componetns
+.primaryBtn {
+    border: none;
+    background-color: #1c1cff;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    width: 150px;
+    transition: .3s ease;
+}
+
+.primaryBtn:hover {
+    transition: .3s ease;
+    background-color: #1313a2;
+}
+
+.primaryLoginAgainBtn {
+    border: none;
+    background-color: #1c1cff;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    width: 150px;
+    transition: .3s ease;
+    margin: 12px;
+}
+
+.primaryLoginAgainBtn:hover {
+    transition: .3s ease;
+    background-color: #1313a2;
+}
+
+.organizeMemberBtn {
+    transition: .3s ease;
+    background-color: $darkInput;
+    width: 100px;
+    text-align: center;
+    padding: 5px;
+}
+
+.organizeMemberBtn:hover {
+    transition: .3s ease;
+    background-color: $darkComponent;
+}
+
+// Ipad Mini
+@media (max-width: 820px) {
+    .registerContainer {
+        height: 90vh;
+    }
+
+    .registerInnerContainer {
+        width: 80%;
+    }
+
+    .registerInnerContainer input {
+        width: 85%;
+    }
+
+    .registerInnerContainer input[type="date"] {
+        width: 110%;
+    }
+
+    .registerInnerContainer select {
+        width: 200%;
+    }
+
+    .forgotInnerContainer input {
+        width: 94%;
+    }
+}
+
+// Iphone XR
+@media (max-width: 414px) {
+    ul li {
+        margin: 5px 0;
+
+    }
+
+    .loginInnerContainer {
+        width: 65%;
+    }
+
+    .loginInnerContainer input {
+        width: 120%;
+    }
+
+    .loginContainer {
+        height: 75vh;
+    }
+
+    .primaryLoginAgainBtn {
+        width: 170px;
+    }
+
+    .resetInnerContainer {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}

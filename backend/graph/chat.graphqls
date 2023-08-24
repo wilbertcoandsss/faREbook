@@ -1,0 +1,51 @@
+type ChatHeader{
+    id: ID!
+    userId1: ID!
+    userId2: ID!
+    createdAt: String!
+}
+
+type ChatDetails{
+    id: ID!
+    chatHeaderId: ID!
+    senderId: ID!
+    chatText: String!
+    createdAt: String!
+    type: String!
+	mediaUrl: String!
+}
+
+type FetchChat{
+    chatHeaderId: ID!
+    chatHeaderInformation: ChatHeader!
+    userId1Data: User!
+    userId2Data: User!
+    chatDetailsInformation: [ChatDetails!]!
+    receiverId: ID!
+    postData: [Post]!
+    postAuthor: [User]!
+}
+
+input newChatHeader{
+    userId1: ID!
+    userId2: ID!
+}
+
+input newChatDetail{
+    chatHeaderId: ID!
+    senderId: ID!
+    chatText: String!
+    type: String!   
+    mediaUrl: String!
+}
+
+extend type Query{
+    getChatHeader(userId1:String!, userId2: String!): String!
+    getAllConversation(userId:String!): [FetchChat!]!
+}
+
+extend type Mutation{
+    createChat(inputChatHeader:newChatHeader!): Boolean!
+    createMessage(inputChatDetail:newChatDetail!): Boolean!
+    createInstantChat(inputChatHeader: newChatHeader!): ChatHeader!
+}

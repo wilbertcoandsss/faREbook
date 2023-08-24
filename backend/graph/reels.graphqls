@@ -1,0 +1,35 @@
+type Reels{
+    Id: ID!
+    UserID: ID!
+    Caption: String!
+    ReelsDate: String!
+    FontColor: String!
+}
+
+type FetchReels{
+    Id: ID!
+    UserID: ID!
+    Caption: String!
+    ReelsDate: String!
+    FontColor: String!
+    LikedCount: Int!
+    CommentCount: Int!
+    MediaUrl: [String!]!
+    AuthorData: User!
+}
+
+input NewReels{
+    Caption: String!
+    UserID: ID!
+    ReelsDate: String!
+    FontColor:String!
+}
+
+extend type Query{
+    getAllReels: [FetchReels!]!
+    getReelsByUserId(UserID: ID!): [FetchReels!]!
+}
+
+extend type Mutation{
+    insertReel(inputReel: NewReels!): Reels!
+}

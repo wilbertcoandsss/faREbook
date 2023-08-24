@@ -1,0 +1,39 @@
+type GroupFiles{
+    ID: ID!
+    GroupId: ID!
+    OwnerId: ID!
+    FileName: String!
+    FileType: String!
+    UploadedDate: String!
+    MediaUrl: String!
+}
+
+type FetchGroupFiles{
+    ID: ID!
+    GroupId: ID!
+    OwnerId: ID!
+    FileName: String!
+    FileType: String!
+    UploadedDate: String!
+    MediaUrl: String!
+    OwnerData: User!
+}
+
+input NewFiles{
+    GroupId: ID!
+    OwnerId: ID!
+    FileName: String!
+    FileType: String!
+    UploadedDate: String!
+    MediaUrl: String!
+}
+
+extend type Query{
+    getGroupFiles(groupId:ID!): [FetchGroupFiles!]!
+    getFileByName(fileName: String!): GroupFiles!
+}
+
+extend type Mutation{
+    createGroupFile(newFile: NewFiles!): GroupFiles!
+    deleteFile(fileId: ID!): Boolean!
+}

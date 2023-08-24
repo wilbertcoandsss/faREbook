@@ -1,0 +1,35 @@
+type GroupMember{
+    UserID: ID!
+    GroupID: ID!
+    Role: String!
+    Status: String!
+}
+
+type GroupMemberWUSer{
+    GroupMember: GroupMember!
+    UserData: User!
+}
+
+input NewGroupMember{
+    UserID: ID!
+    GroupID: ID!
+    Role: String!
+    Status: String!
+}
+
+extend type Mutation{
+    insertGroupMember(newGroupMember: NewGroupMember!): Boolean!
+    acceptInvitation(UserID:ID!, GroupID:ID!, Status:String!): Boolean!
+    declineInvitation(UserID:ID!, GroupID:ID!): Boolean!
+    leaveGroup(UserID:ID!, GroupID:ID!): Boolean!
+    sendRequest(UserID:ID!, GroupID:ID!): Boolean!
+    promoteMember(UserID:ID!, GroupID:ID!): Boolean!
+    exitGroupAdmin(UserID: ID!, GroupID:ID!): Boolean!
+}
+
+extend type Query{
+    checkRole(groupId:ID!, userId:ID!): String!
+    checkInvitation(userId:ID!): [Group!]!
+    checkRequest(groupId:ID!): [User!]!
+    getGroupMember(GroupId:ID!): [User!]!
+}

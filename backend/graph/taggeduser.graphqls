@@ -1,0 +1,12 @@
+type TaggedUser{
+    userId: ID!
+    postId: ID!
+}
+
+extend type Query{
+    getAllTagged(postId:ID!): [TaggedUser!]!
+}
+
+extend type Mutation{
+    insertTaggedUser(postId:ID!, userId:ID!): Boolean!
+}
